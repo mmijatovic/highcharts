@@ -31,7 +31,7 @@ Say you have a datetime x axis and irregular intervals between the points. Then 
     
     <?php
     while ($row = mysql_fetch_array($result)) {
-       extract $row;
+       extract ($row);
        $datetime *= 1000; // convert from Unix timestamp to JavaScript time
        $data[] = "[$datetime, $value]";
     }
